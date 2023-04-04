@@ -1,0 +1,7 @@
+README.md
+setup.py
+easy_cleaner.egg-info/PKG-INFO
+easy_cleaner.egg-info/SOURCES.txt
+easy_cleaner.egg-info/dependency_links.txt
+easy_cleaner.egg-info/requires.txt
+easy_cleaner.egg-info/top_level.txt
