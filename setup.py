@@ -1,6 +1,6 @@
 from setuptools import setup, find_packages
 NAME = 'easy_cleaner'
-VERSION = '1.0.2'
+VERSION = '1.0.3'
 DESCRIPTION = 'Tools to clean Chinese/English Text'
 AUTHOR = 'zbw'
 AUTHOR_EMAIL = 'zbw292@126.com'
@@ -10,7 +10,8 @@ INSTALL_REQUIRES = [
     'numpy==1.19.2',
     'opencc==1.1.6',
     'urlextract==1.8.0',
-    'fasttext'
+    'fasttext',
+    'jieba'
 ]
 with open('README.md', 'r') as fh:
     LONG_DESCRIPTION = fh.read()
