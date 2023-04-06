@@ -1,6 +1,6 @@
 from setuptools import setup, find_packages
 NAME = 'easy_cleaner'
-VERSION = '1.0.0'
+VERSION = '1.0.1'
 DESCRIPTION = 'Tools to clean Chinese/English Text'
 AUTHOR = 'zbw'
 AUTHOR_EMAIL = 'zbw292@126.com'
