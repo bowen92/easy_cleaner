@@ -6,12 +6,13 @@ from .batch_processor_utils import BatchProcessorUtils
 import os,json
 
 class BatchProcessor(ABC):
-    def __init__(self, indir, outdir, normalize=True):
+    def __init__(self, indir, outdir, normalize=True, language='cn'):
         self.indir = indir
         self.outdir = outdir
         self.text_cleaner = TextCleaner()
-        self.classifier = QualityClassifer()
+        self.classifier = QualityClassifer(language=language)
         self.normalize = normalize
+        self.language = language
     
     @abstractmethod
     def preprocess(self, line):
@@ -22,7 +23,7 @@ class BatchProcessor(ABC):
             line = self.preprocess(line)
             dic = json.loads(line)
             if self.normalize:
-                cleaned_text = self.text_cleaner.clean(dic['text'])
+                cleaned_text = self.text_cleaner.clean(dic['text'], language=self.language)
             else:
                 cleaned_text = dic['text']
             if len(cleaned_text) == 0:

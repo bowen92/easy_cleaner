@@ -7,11 +7,11 @@ default_config = {
 }
 
 class QualityClassifer(object):
-    def __init__(self, config=None, language='zh'):
+    def __init__(self, config=None, language='cn'):
         self.config = config if config else default_config
         if language == 'en':
             self.model = fasttext.load_model(self.config['en_model_path'])
-        elif language == 'zh':
+        elif language == 'cn':
             self.model = fasttext.load_model(self.config['zh_model_path'])
 
     def classify(self, text):
